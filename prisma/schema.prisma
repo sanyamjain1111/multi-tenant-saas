@@ -1,12 +1,14 @@
+// prisma/schema.prisma
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider = "postgresql"
+  url      = "postgres://postgres.cbtxqimimorrsnwyxaeq:yyfxqKD2HzPQDjXL@aws-1-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&pgbouncer=true"
 }
+
+// Keep all your existing models the same...
 
 // Keep all your existing models exactly the same
 model Tenant {
